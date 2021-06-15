@@ -18,12 +18,16 @@ $(document).ready(function() {
   $('tweet').text(tweet.content.text);
   $('.tweet-time').text(timeago.format(tweet.created_at));
   //change code above
+
+  //Box-shadow while hover
   $('.tweet').on('mouseover', function(event) {
     $(this).css('box-shadow', '5px 5px #778ba5')
   });
   $('.tweet').on('mouseout', function(event) {
     $(this).css('box-shadow', 'none')
   });
+
+  //Change color of flags when in focus
   $('.fa-flag').on('mouseover', function(event) {
     $(this).css('color', 'sandybrown');
   });
