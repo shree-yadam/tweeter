@@ -7,7 +7,7 @@
 //Function to create HTML for ther tweets received from server
 const createTweetElement = function(tweetObj) {
   const $tweet = $('<article class="tweet">');
-  const markUp = `
+  const markUpHeader = `
   <header>
     <div class="user-profile">
       <img src=${tweetObj.user.avatars}>
@@ -17,10 +17,8 @@ const createTweetElement = function(tweetObj) {
       <p>${tweetObj.user.handle}</p>
     </div>
   </header>
-  <div class="old-tweet">
-    <tweet>${tweetObj.content.text}</tweet>
-  </div>
-  <footer>
+  `;
+  const markUpFooter = `<footer>
     <p class="tweet-time">${timeago.format(tweetObj.content.created_at)}</p>
     <Flags>
       <i class="fas fa-flag"></i>
@@ -29,7 +27,11 @@ const createTweetElement = function(tweetObj) {
     </Flags>
   </footer>
   `;
-  $tweet.append(markUp);
+  $tweet.append(markUpHeader);
+  //Make content safe from XSS
+  const markUpContent = $('<div class="old-tweet">').text(tweetObj.content.text);
+  $tweet.append(markUpContent);
+  $tweet.append(markUpFooter);
   return $tweet;
 };
 
@@ -86,7 +88,6 @@ $(document).ready(function() {
       });
   };
   loadTweets();
-
   //Handle tweet post
   $('#tweet-post').submit(function(event) {
     event.preventDefault();
