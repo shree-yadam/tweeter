@@ -1,6 +1,7 @@
 article.tweet {
   border: solid black;
   margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 article.tweet header {
