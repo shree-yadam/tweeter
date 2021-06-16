@@ -4,31 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 const createTweetElement = function(tweetObj) {
   const $tweet = $('<article class="tweet">');
   const markUp = `
@@ -58,8 +33,73 @@ const createTweetElement = function(tweetObj) {
 };
 
 const renderTweets = function(tweetObjects) {
-  data.forEach(tweet => {
+  tweetObjects.forEach(tweet => {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
   });
+
+  //Box-shadow while hover
+  $('.tweet').on('mouseover', function(event) {
+    $(this).css('box-shadow', '5px 5px #778ba5');
+  });
+  $('.tweet').on('mouseout', function(event) {
+    $(this).css('box-shadow', 'none');
+  });
+
+  //Change color of flags when in focus
+  $('.fa-flag').on('mouseover', function(event) {
+    $(this).css('color', 'sandybrown');
+  });
+  $('.fa-flag').on('mouseout', function(event) {
+    $(this).css('color', '#4056A1');
+  });
+  $('.fa-retweet').on('mouseover', function(event) {
+    $(this).css('color', 'sandybrown');
+  });
+  $('.fa-retweet').on('mouseout', function(event) {
+    $(this).css('color', '#4056A1');
+  });
+  $('.fa-heart').on('mouseover', function(event) {
+    $(this).css('color', 'sandybrown');
+  });
+  $('.fa-heart').on('mouseout', function(event) {
+    $(this).css('color', '#4056A1');
+  });
 };
+
+const sendNewTweet = function(event) {
+  console.log("Submit pressed");
+  event.preventDefault();
+  const newTweet = $(this).serialize();
+  console.log(newTweet);
+  const params = {
+    url: '/tweets',
+    method: 'POST',
+    data: newTweet
+  };
+  $.ajax(params)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+$(document).ready(function() {
+  $('#tweet-post').submit(sendNewTweet);
+
+  const loadTweets = function() {
+    const params = {
+      url: '/tweets',
+      method: 'GET'
+    };
+    $.ajax(params)
+      .then((response) => {
+        renderTweets(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  loadTweets();
+});
