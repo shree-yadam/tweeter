@@ -5,6 +5,7 @@
  */
 
 //Function to create HTML for ther tweets received from server
+
 const createTweetElement = function(tweetObj) {
   const $tweet = $('<article class="tweet">');
   const markUpHeader = `
@@ -44,50 +45,43 @@ const renderTweets = function(tweetObjects) {
   });
 };
 
-$(document).ready(function() {
+const tweetFormShow = function() {
+  $('.new-tweet').slideDown();
+  $('#tweet-text').focus();
+};
+
+const tweetFormToggle = function(event) {
+  if ($('.new-tweet').is(':visible')) {
+    $('.new-tweet').slideUp();
+  } else {
+    tweetFormShow();
+  }
+};
+
+const initialHideElements = function() {
   $('div.error').hide();
-  //Load tweets
-  const loadTweets = function() {
-    const params = {
-      url: '/tweets',
-      method: 'GET'
-    };
-    $.ajax(params)
-      .then((response) => {
-        renderTweets(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+};
+
+//Load tweets
+const loadTweets = function() {
+  const params = {
+    url: '/tweets',
+    method: 'GET'
   };
+  $.ajax(params)
+    .then((response) => {
+      renderTweets(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+$(document).ready(function() {
+  
+  initialHideElements();
+
+  $('.right-nav').click(tweetFormToggle);
+
   loadTweets();
-  //Handle tweet post
-  $('#tweet-post').submit(function(event) {
-    event.preventDefault();
-    $('div.error').slideUp();
-    const newTweet = $(this).serialize();
-    if ($('#tweet-text').val() === "") {
-      console.log("error");
-      $('div.error h6').text("Please enter new tweet before posting!");
-      $('div.error').slideDown();
-    } else if ($('#tweet-text').val().length > LENGTH_OF_INPUT_TEXT) {
-      $('div.error h6').text(`Tweet cannot have more than ${LENGTH_OF_INPUT_TEXT} characters!`);
-      $('div.error').slideDown();
-    } else {
-      const params = {
-        url: '/tweets',
-        method: 'POST',
-        data: newTweet
-      };
-      $.ajax(params)
-        .then((response) => {
-          loadTweets();
-          $('#tweet-text').val("");
-          $('output.counter').val(`${LENGTH_OF_INPUT_TEXT}`);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  });
 });

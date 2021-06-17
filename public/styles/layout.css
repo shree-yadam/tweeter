@@ -28,3 +28,15 @@ main {
   width: 90%;
   margin: auto;
 }
+
+.fa-angle-double-up {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  margin: 20px;
+  padding: 5px 15px 5px 15px;
+  bottom: 0;
+  right: 0;
+  display: none;
+}

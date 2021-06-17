@@ -26,20 +26,21 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/composer.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="nav-bar">
       <span class="app-name">TWEETER</span>
-      <div class="right-nav">
+      <button class="right-nav">
         <div class="right-nav-text">
           <span><strong>Write</strong> a new tweet</span>
         </div>
         <div class="angle-bracket-icon">
           <i class="fas fa-angle-double-down"></i>
         </div>
-      </div>
+      </button>
     </nav>
     <header class="app-header">
       <div class="profile-pic">
@@ -74,6 +75,7 @@
         </form>
       </section>
       <section id="tweets-container"></section>
+      <i id="scroll-top-button" class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
     </main>
   </body>
 </html>

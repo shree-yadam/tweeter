@@ -49,3 +49,7 @@ article.tweet footer {
 article.tweet footer flags {
   color: #4056A1;
 }
+
+.new-tweet {
+  display: none;
+}
