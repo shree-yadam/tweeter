@@ -6,21 +6,21 @@ Point to remember is this project is mainly to practice HTML, CSS, JS, jQuery an
 
 ## Final Product
 ###### Main Page (Tablet)
-!["Main Page Tablet"](docs/login.png)
+!["Main Page Tablet"](docs/tabletMainPage.png)
 ###### Main Page (Tablet - no input form)
-!["Main Page Tablet - no input form"](docs/login.png)
-###### Tablet - scrolled down
-!["Tablet - scrolled down"](docs/login.png)
-###### Tablet - display error
-!["Tablet - display error"](docs/login.png)
-###### Tablet - box shadow
-!["Tablet - box shadow"](docs/login.png)
-###### Tablet - flag color change
-!["Tablet - flag color change"](docs/login.png)
+!["Main Page Tablet - no input form"](docs/tabletMainNoForm.png)
+###### Tablet - scrolled down: button to scroll up displayed at the bottom right corner
+!["Tablet - scrolled down"](docs/tabletScrollDown.png)
+###### Display error
+!["Tablet - display error"](docs/tabletError.png)
+###### Box shadow: when user hovers over a tweet the box shows shadow effect
+!["Tablet - box shadow"](docs/tabletBoxShadow.png)
+###### Flag color change - when user hovers over any of the three flags, they change color
+!["Tablet - flag color change"](docs/tabletFlagColorChange.png)
 ###### Main Page (Desktop)
-!["Main Page Desktop"](docs/login.png)
+!["Main Page Desktop"](docs/desktopMain.png)
 ###### Main Page (Desktop - no input form)
-!["Main Page Desktop - no input form"](docs/login.png)
+!["Main Page Desktop - no input form"](docs/desktopMainNoForm.png)
 
 ## Dependencies
 

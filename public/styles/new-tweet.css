@@ -35,7 +35,7 @@ label {
 }
 
 .tweet:hover {
-  box-shadow: 5px 5px #778ba5;
+  box-shadow: 10px 10px #778ba5;
 }
 
 .tweet {
