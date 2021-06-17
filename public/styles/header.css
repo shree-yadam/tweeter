@@ -9,17 +9,14 @@
   position: relative;
   color: white;
 }
-
 .profile-pic {
   position: relative;
   top: 125px;
 }
-
 .profile-name {
   position: relative;
   top: 55px;
 }
-
 #profile-pic {
   width: 90%;
   height: 90%;

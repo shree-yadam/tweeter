@@ -5,7 +5,6 @@
  */
 
 //Function to create HTML for ther tweets received from server
-
 const createTweetElement = function(tweetObj) {
   const $tweet = $('<article class="tweet">');
   const markUpHeader = `
