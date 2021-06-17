@@ -7,8 +7,7 @@ const handleScrollPage = function(event) {
     $('.fa-angle-double-up').hide();
     $('.right-nav').show();
   }
-}
-
+};
 
 $(document).ready(function() {
   $(document).scroll(handleScrollPage);
@@ -16,6 +15,11 @@ $(document).ready(function() {
   $('#scroll-top-button').click(function(event) {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     tweetFormShow();
+  });
+
+  $('.error-close').click(function(event) {
+    $('div.error').slideUp();
+    $('#tweet-text').focus();
   });
 
   //Handle tweet post

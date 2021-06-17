@@ -1,8 +1,34 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page AJAX-based Twitter clone. This project is a part of week4 at Lighthouse Labs Web Development Bootcamp.
+It uses jQuery, HTML5 and CSS3 with responsive design to adapt to screen sizes between desktop and tablet. 
+Point to remember is this project is mainly to practice HTML, CSS, JS, jQuery and AJAX front-end skills.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Final Product
+###### Main Page (Tablet)
+!["Main Page Tablet"](docs/login.png)
+###### Main Page (Tablet - no input form)
+!["Main Page Tablet - no input form"](docs/login.png)
+###### Tablet - scrolled down
+!["Tablet - scrolled down"](docs/login.png)
+###### Tablet - display error
+!["Tablet - display error"](docs/login.png)
+###### Tablet - box shadow
+!["Tablet - box shadow"](docs/login.png)
+###### Tablet - flag color change
+!["Tablet - flag color change"](docs/login.png)
+###### Main Page (Desktop)
+!["Main Page Desktop"](docs/login.png)
+###### Main Page (Desktop - no input form)
+!["Main Page Desktop - no input form"](docs/login.png)
+
+## Dependencies
+
+- Express
+- Node 5.10.x or above
+- Body Parser
+- Chance
+- md5
 
 ## Getting Started
 
@@ -11,7 +37,4 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-## Dependencies
 
-- Express
-- Node 5.10.x or above

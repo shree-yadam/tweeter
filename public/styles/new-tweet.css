@@ -4,54 +4,68 @@ button {
   padding: 5px;
   margin: 5px;
 }
+
 .tweet-input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-bottom: solid black;
 }
+
 textarea {
   border: none;
   outline: none;
   background-color: transparent;
   padding-top: 0.5em;
 }
+
 .form-footer {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
   padding-top: 0.5em;
 }
+
 .counter {
   font-weight: bold;
 }
+
 label {
   font-weight: bold;
 }
+
 .tweet:hover {
   box-shadow: 5px 5px #778ba5;
 }
+
 .tweet {
   box-shadow: none;
 }
+
 .fa-flag:hover {
   color: sandybrown;
 }
+
 .fa-flag {
   color: #4056A1;
 }
+
 .fa-retweet:hover {
   color: sandybrown;
 }
+
 .fa-retweet {
   color: #4056A1;
 }
+
 .fa-heart:hover {
   color: sandybrown;
 }
+
 .fa-heart {
   color: #4056A1;
 }
+
 /*error box styling */
 .error {
   padding: 10px;
@@ -61,6 +75,7 @@ label {
   display: flex;
   justify-content: space-between;
 }
+
 .error-text {
   display: flex;
   flex-direction: row;
@@ -78,10 +93,12 @@ label {
 .error-close:hover {
   color: black;
 }
+
 #error-msg {
   padding: 0;
   margin: 0
 }
+
 .fa-exclamation-triangle {
   padding-left: 20px;
   padding-right: 20px;

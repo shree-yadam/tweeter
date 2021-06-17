@@ -3,23 +3,28 @@ article.tweet {
   margin-top: 3em;
   margin-bottom: 3em;
 }
+
 article.tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 article.tweet header div {
   display: flex;
   flex-direction: row;
 }
+
 article.tweet header div img {
   padding-left: 1em;
   padding-top: 1em;
   height: fit-content;
 }
+
 article.tweet header div p{
   padding: 1em 1em 0.5em 1em;
 }
+
 .old-tweet {
   margin: 0.5em;
   border-bottom: solid black;
@@ -27,6 +32,7 @@ article.tweet header div p{
   font-weight: bold;
   overflow-wrap: break-word;
 }
+
 article.tweet footer {
   display: flex;
   flex-direction: row;
@@ -34,6 +40,7 @@ article.tweet footer {
   font-size: 18px;
   margin: 1.5em;
 }
+
 .tweet-time {
   padding-top: 0;
   margin-top: 0;
@@ -41,9 +48,7 @@ article.tweet footer {
 article.tweet footer flags {
   color: #4056A1;
 }
-.new-tweet {
-  display: none;
-}
+
 div.user-profile p {
   width: 20ch;
 }

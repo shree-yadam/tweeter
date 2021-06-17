@@ -1,0 +1,33 @@
+@media screen and (min-width: 1024px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.container {
+    flex-direction: row;
+    margin-top: 240px;
+    justify-content: flex-start;
+  }
+
+  .app-header {
+    width: 33.3%;
+    float: left;
+    margin: 30px;
+    height: width;
+  }
+
+  #main-container {
+    width: 66.7%; 
+    margin: 20px;
+  } 
+
+  .nav-bar {
+    background-color: #4056A1;
+  }
+  
+  .profile-pic {
+    position: relative;
+    top: 30px;
+  }
+}

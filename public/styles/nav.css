@@ -12,11 +12,13 @@ nav{
   top: 0;
   z-index: 9;
 }
+
 .app-name {
   font-size: 40px;
   font-family: "Bungee", sans-serif;
   margin-bottom: 0.5em;
 }
+
 .right-nav {
   display: flex;
   flex-direction: column;
@@ -25,15 +27,18 @@ nav{
   border: none;
   background-color: transparent;
 }
+
 .angle-bracket-icon {
   color: red;
 }
+
 .fa-angle-double-down {
   position: relative;
   margin-top: 10px;
   height: 10px;
   width: 10px;
 }
+
 .right-nav:hover {
   cursor: pointer;
 }
