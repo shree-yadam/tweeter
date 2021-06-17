@@ -59,6 +59,14 @@
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
           </div>
+          <div class="error">
+            <div class="error-text">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <h6 id="error-msg">Please enter new tweet before posting!</h6>
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            </div>
+            <span class="error-close" onclick="this.parentElement.style.display='none';">&times;</span>
+          </div>
           <div class="form-footer">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

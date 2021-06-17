@@ -42,37 +42,10 @@ const renderTweets = function(tweetObjects) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
   });
-
-  //Box-shadow while hover
-  $('.tweet').on('mouseover', function(event) {
-    $(this).css('box-shadow', '5px 5px #778ba5');
-  });
-  $('.tweet').on('mouseout', function(event) {
-    $(this).css('box-shadow', 'none');
-  });
-
-  //Change color of flags when in focus
-  $('.fa-flag').on('mouseover', function(event) {
-    $(this).css('color', 'sandybrown');
-  });
-  $('.fa-flag').on('mouseout', function(event) {
-    $(this).css('color', '#4056A1');
-  });
-  $('.fa-retweet').on('mouseover', function(event) {
-    $(this).css('color', 'sandybrown');
-  });
-  $('.fa-retweet').on('mouseout', function(event) {
-    $(this).css('color', '#4056A1');
-  });
-  $('.fa-heart').on('mouseover', function(event) {
-    $(this).css('color', 'sandybrown');
-  });
-  $('.fa-heart').on('mouseout', function(event) {
-    $(this).css('color', '#4056A1');
-  });
 };
 
 $(document).ready(function() {
+  $('div.error').hide();
   //Load tweets
   const loadTweets = function() {
     const params = {
@@ -91,11 +64,15 @@ $(document).ready(function() {
   //Handle tweet post
   $('#tweet-post').submit(function(event) {
     event.preventDefault();
+    $('div.error').slideUp();
     const newTweet = $(this).serialize();
     if ($('#tweet-text').val() === "") {
-      alert("Please enter new tweet before posting!");
-    } else if ($('#tweet-text').val().length > 140) {
-      alert("Tweet cannot have more than 140 characters!");
+      console.log("error");
+      $('div.error h6').text("Please enter new tweet before posting!");
+      $('div.error').slideDown();
+    } else if ($('#tweet-text').val().length > LENGTH_OF_INPUT_TEXT) {
+      $('div.error h6').text(`Tweet cannot have more than ${LENGTH_OF_INPUT_TEXT} characters!`);
+      $('div.error').slideDown();
     } else {
       const params = {
         url: '/tweets',
@@ -106,6 +83,7 @@ $(document).ready(function() {
         .then((response) => {
           loadTweets();
           $('#tweet-text').val("");
+          $('output.counter').val(`${LENGTH_OF_INPUT_TEXT}`);
         })
         .catch((error) => {
           console.log(error);

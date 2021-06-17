@@ -29,3 +29,74 @@ textarea {
 label {
   font-weight: bold;
 }
+
+.tweet:hover {
+  box-shadow: 5px 5px #778ba5;
+}
+
+.tweet {
+  box-shadow: none;
+}
+
+.fa-flag:hover {
+  color: sandybrown;
+}
+
+.fa-flag {
+  color: #4056A1;
+}
+
+.fa-retweet:hover {
+  color: sandybrown;
+}
+
+.fa-retweet {
+  color: #4056A1;
+}
+
+.fa-heart:hover {
+  color: sandybrown;
+}
+
+.fa-heart {
+  color: #4056A1;
+}
+
+/*error box styling */
+.error {
+  padding: 10px;
+  background-color: #c33; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-text {
+  display: flex;
+  flex-direction: row;
+}
+
+/* The close button */
+.error-close {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.error-close:hover {
+  color: black;
+}
+
+#error-msg {
+  padding: 0;
+  margin: 0
+}
+
+.fa-exclamation-triangle {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: fit-content;
+}
