@@ -81,6 +81,15 @@ $(document).ready(function() {
   
   initialHideElements();
 
+  //Animate double down icon
+  $('.fa-angle-double-down').hover(function(){
+    $(this).animate({top: "-10"});
+    console.log("mouseover");
+  }, function() {
+    $(this).animate({top: "0"});
+    console.log("mouseout");
+  });
+
   $('.right-nav').click(tweetFormToggle);
 
   loadTweets();
