@@ -2,10 +2,10 @@
 const handleScrollPage = function(event) {
   if ($(window).scrollTop() > $(window).height() / 4) {
     $('.fa-angle-double-up').show();
-    $('.right-nav').hide();
+    $('nav.nav-bar button').hide();
   } else {
     $('.fa-angle-double-up').hide();
-    $('.right-nav').show();
+    $('nav.nav-bar button').show();
   }
 };
 

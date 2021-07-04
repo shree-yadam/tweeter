@@ -1,6 +1,8 @@
+@import "variable";
+
 button {
-  background-color: #4056A1;
-  color: white;
+  background-color: $color-blue;
+  color: $color-white;
   padding: 5px;
   margin: 5px;
 }
@@ -9,20 +11,20 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: solid black;
+  border-bottom: solid $color-black;
 }
 
 textarea {
   border: none;
   outline: none;
-  background-color: transparent;
+  background-color: $color-transparent;
   padding-top: 0.5em;
 }
 
 .form-footer {
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", sans-serif;
+  font-family: $font-title-stack;
   padding-top: 0.5em;
 }
 
@@ -43,35 +45,34 @@ label {
 }
 
 .fa-flag:hover {
-  color: sandybrown;
+  color: $color-sandybrown;
 }
 
 .fa-flag {
-  color: #4056A1;
+  color: $color-blue;
 }
 
 .fa-retweet:hover {
-  color: sandybrown;
+  color: $color-sandybrown;
 }
 
 .fa-retweet {
-  color: #4056A1;
+  color: $color-blue;
 }
 
 .fa-heart:hover {
-  color: sandybrown;
+  color: $color-sandybrown;
 }
 
 .fa-heart {
-  color: #4056A1;
+  color: $color-blue;
 }
 
 /*error box styling */
 .error {
   padding: 10px;
-  background-color: red;
-  /* Red */
-  color: white;
+  background-color: $color-red; /* Red */
+  color: $color-white;
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
@@ -84,7 +85,7 @@ label {
 
 /* The close button */
 .error-close {
-  color: white;
+  color: $color-white;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
@@ -92,12 +93,12 @@ label {
 
 /* When moving the mouse over the close button */
 .error-close:hover {
-  color: black;
+  color: $color-black;
 }
 
 #error-msg {
   padding: 0;
-  margin: 0;
+  margin: 0
 }
 
 .fa-exclamation-triangle {

@@ -26,13 +26,14 @@ $(document).ready(function() {
   initialHideElements();
 
   //Animate double down icon
-  $('.fa-angle-double-down').hover(function() {
-    $(this).animate({ top: "-10" });
-  }, function() {
-    $(this).animate({ top: "0" });
-  });
+  // $('.fa-angle-double-down').hover(function() {
+  //   $(this).animate({ top: "-10" });
+  // }, function() {
+  //   $(this).animate({ top: "0" });
+  // });
+  $('.fa-angle-double-down').hover(function downLoop() { $(this).animate({ top: "-10" }, { duration: 600, complete: function upLoop() { $(this).animate({top: 0}, { duration: 600, complete: downLoop }) }}); });
 
-  $('.right-nav').click(tweetFormToggle);
+  $('nav.nav-bar button').click(tweetFormToggle);
 
   loadTweets();
 });

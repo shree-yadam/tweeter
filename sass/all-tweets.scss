@@ -1,5 +1,7 @@
+@import "variable";
+
 article.tweet {
-  border: solid black;
+  border: solid $color-black;
   margin-top: 3em;
   margin-bottom: 3em;
 }
@@ -21,13 +23,13 @@ article.tweet header div img {
   height: fit-content;
 }
 
-article.tweet header div p {
+article.tweet header div p{
   padding: 1em 1em 0.5em 1em;
 }
 
 .old-tweet {
   margin: 0.5em;
-  border-bottom: solid black;
+  border-bottom: solid $color-black;
   padding: 1em 0.5em 1em 0.5em;
   font-weight: bold;
   overflow-wrap: break-word;
@@ -45,9 +47,8 @@ article.tweet footer {
   padding-top: 0;
   margin-top: 0;
 }
-
 article.tweet footer flags {
-  color: #4056A1;
+  color: $color-blue;
 }
 
 div.user-profile p {
